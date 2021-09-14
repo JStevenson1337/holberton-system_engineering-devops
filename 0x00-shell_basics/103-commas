@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -X1r -m --indicator-style==slash . 
