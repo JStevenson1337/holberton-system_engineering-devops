@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -X1R -m --indicator-style=slash . 
+ls -X1R -m -p . 
