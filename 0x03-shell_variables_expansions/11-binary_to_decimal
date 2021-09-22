@@ -1,2 +1,2 @@
 #!/bin/bash
-echo printf '%x\n' $(($2#BINARY))
+printf '%x\n' $((2#BINARY))
