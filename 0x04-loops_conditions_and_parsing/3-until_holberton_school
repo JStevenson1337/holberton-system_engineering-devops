@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Prints Holberton School using a while loop
 i=0
 until [ $i ==  10 ]
 do
