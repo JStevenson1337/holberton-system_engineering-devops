@@ -1,0 +1,10 @@
+COMMAND     PID   USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME
+bash    3043653 jeremy  255r   REG  253,1      156 6300235 ../0x05-processes_and_signals/4-to_infinity_and_beyond
+bash    3048975 jeremy  255r   REG  253,1      156 6300235 ../0x05-processes_and_signals/4-to_infinity_and_beyond
+bash    3090553 jeremy  255r   REG  253,1      156 6300235 ../0x05-processes_and_signals/4-to_infinity_and_beyond
+bash    3171320 jeremy  255r   REG  253,1      156 6300235 ../0x05-processes_and_signals/4-to_infinity_and_beyond
+bash    3195048 jeremy  255r   REG  253,1      156 6300235 ../0x05-processes_and_signals/4-to_infinity_and_beyond
+bash    3238737 jeremy  255r   REG  253,1      156 6300235 ../0x05-processes_and_signals/4-to_infinity_and_beyond
+bash    3314461 jeremy  255r   REG  253,1      156 6300235 ../0x05-processes_and_signals/4-to_infinity_and_beyond
+bash    3321743 jeremy  255r   REG  253,1      156 6300235 ../0x05-processes_and_signals/4-to_infinity_and_beyond
+bash    3324967 jeremy  255r   REG  253,1      156 6300235 ../0x05-processes_and_signals/4-to_infinity_and_beyond
