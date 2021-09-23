@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Bash script that stops 4-to_infinity_and_beyond process.
+for i in $(lsof --names ..4-to_infinity*)
+do
+	echo -e "$i"
+done
