@@ -9,7 +9,7 @@ do
         9)
         echo -e "$i\nbad luck from Japan" ;; 
 	17)
-        echo -e "$i\nbad luck from Itally" ;;
+        echo -e "$i\nbad luck from Italy" ;;
         *) echo "$i" ;;
     esac
     (( i=i+1 ));
