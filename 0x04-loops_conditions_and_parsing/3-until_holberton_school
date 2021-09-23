@@ -3,6 +3,6 @@
 i=0
 until [ $i ==  10 ];
 do
-	echo "Holberton School"
-	i=$[$i+1];
+    echo "Holberton School"
+    (( i=i+1 ));
 done
