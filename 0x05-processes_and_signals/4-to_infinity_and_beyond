@@ -5,4 +5,5 @@ while [ $i -le 100 ]
 do
 	echo "To infinity and beyond"
 	(( i+i))
+	sleep 2
 done
