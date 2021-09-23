@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #Bash script that displays:To infinity and beyond; Sleep 2 I am invincible!!! when receiving a SIGTERM signal
 # Set a trap for SIGINT and SIGTERM signals
-trap "{ echo 'I am invincible!!!'; }" EXIT
+trap "{ echo 'I am invincible!!!'; }" SIGTERM
 
 i=0
 while [ $i -le 100 ]
 do
-	echo "infinity and beyond"
+	echo "To infinity and beyond"
 	sleep 2	
 	(( i+i ))
 done
