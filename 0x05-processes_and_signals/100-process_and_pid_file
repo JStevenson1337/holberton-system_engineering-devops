@@ -4,23 +4,14 @@
 #Displays I hate the kill command when receiving a SIGTERM signal
 #Displays Y U no love me?! when receiving a SIGINT signal
 #Deletes the file /var/run/holbertonscript.pid and terminates itself when receiving a SIGQUIT or SIGTERM signal
-
-#trap "echo I hate the kill command" SIGTERM
-#trap "rm -f $FILE" SIGTERM
-#trap "rm -f $FILE" SIGQUIT 
 trap "echo Y U no love me?!" SIGINT
-#kill -- -$$ # Sends SIGTERM to child/sub processes
-
 function cleanup {
        	echo "I hate the kill command"
 	rm $FILE
 	exit $?
 }
 
-
-
-#FILE=/var/run/holbertonscript.pid
-FILE=./holbertonscript.pid
+FILE=/var/run/holbertonscript.pid
 echo "$$" > $FILE
 while :
 do
@@ -30,5 +21,3 @@ do
     trap cleanup SIGQUIT
     trap cleanup SIGTERM
 done
-
-
