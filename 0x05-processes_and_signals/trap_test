@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+## Bash script that displays its own PID.
+trap "echo SIGTERM" SIGTERM
+trap "echo SIGINT signal value 2 The process was“interrupted" SIGINT
+trap "echo SIGQUIT" SIGQUIT
+trap "echo SIGKILL signal value 9 kill was used"  SIGKILL
+trap "echo SIGTERM signal value 15  kill was used" SIGTERM
+trap "echo SIGPROF proof that the process has run for 5 seconds" SIGPROF 
+trap "echo SIGHUP signal value 1 hang up occured" SIGHUP
+trap "echo SIGTERM signal 0 process exited properly" EXIT
+trap -lp
+echo "$$" && sleep 2h
+kill "$(cat $PID)"
+

@@ -18,14 +18,14 @@ case "$1" in
         ;;
 
 
-stop)
+    stop)
         pkill -f 101-manage_my_process
         rm -f "$PFILE"
         echo -n "manage_my_process stopped"
         ;;
 
 
-restart)
+    restart)
         $0 stop
         $0 start
         #pkill -f 101-manage_my_process

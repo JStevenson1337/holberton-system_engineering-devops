@@ -15,7 +15,7 @@ FILE=/var/run/holbertonscript.pid
 echo "$$" > $FILE
 while :
 do
-    echo "To infinity and beyond $$"
+    echo "To infinity and beyond"
     a=1
     sleep 5
     trap cleanup SIGQUIT
