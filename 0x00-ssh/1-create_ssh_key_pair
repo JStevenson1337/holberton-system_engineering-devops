@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Generate a 4096 byte keypair
 
 ssh-keygen -b 4096 -P betty -f school
-

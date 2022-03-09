@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# Connetcion to Web Server
 
-ssh ubuntu@54.83.188.32 -i ~/.ssh/school
-
+ssh -i ~/.ssh/school ubuntu@54.83.188.32
