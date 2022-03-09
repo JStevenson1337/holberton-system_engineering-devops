@@ -3,6 +3,7 @@ Include /etc/ssh/ssh_config.d/*.conf
 
 Host 54.175.20.238
     IdentityFile ~/.ssh/school
+    PasswordAuthentication no
     SendEnv LANG LC_*
     HashKnownHosts yes
     GSSAPIAuthentication yes
