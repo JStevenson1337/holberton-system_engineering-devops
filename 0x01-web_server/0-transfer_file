@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Xfer file to web-01 server
+# 4 parameters: file, host, user, password
+
+if [ "$#" -lt 3 ]; then
+    echo "Usage: '$0' <file> <host> <user> <password>"
+else
+    scp -i "$4" "$1" "$2":"$3"
+fi
