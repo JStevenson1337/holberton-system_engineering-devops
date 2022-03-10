@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#  Install nginx on web-01 server
+
+sudo apt -y update && sudo apt -y upgrade
+sudo apt -y install nginx
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+sudo /etc/init.d/nginx start
+search="^\tlocation / {"
+redirect1="\tlocation /redirect_me {\n\t\treturn 301 \$scheme://youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n\n\tlocation / {"
+redirect2="\tlocation /custom_404 {\n\t\treturn 404;\n\t}\n\n\tlocation / {"
+sed -i "s@$search@$redirect1@" /etc/nginx/sites-available/default
+sed -i "s@$search@$redirect2@" /etc/nginx/sites-available/default
+sudo /etc/init.d/nginx restart
