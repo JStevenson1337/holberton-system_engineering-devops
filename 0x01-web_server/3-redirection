@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 #  Install nginx on web-01 server
 
-sudo apt -y update && sudo apt -y upgrade
+html="/var/www/html/index.nginx-debian.html"
+conf="/etc/nginx/sites-available/default"
+
+sudo apt -y update && sudo apt -y upgrade $html
 sudo apt -y install nginx
-echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+
+echo "Hello World!" | sudo tee 
 sudo /etc/init.d/nginx start
-search="^\tlocation / {"
-alt="\tlocation /redirect_me {\n\t\treturn 301 \$scheme://https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n\n\tlocation / {"
-sed -i "s/$search/$alt/g" /etc/nginx/sites-available/default
+
+str="location /redirect_me {\nreturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
+sed "47,$ d"
+sed -i "47i $str" $conf
 sudo /etc/init.d/nginx restart
