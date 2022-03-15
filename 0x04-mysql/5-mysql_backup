@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Bash script that backups mysql database
+################################################################
+##
+##   MySQL Database Backup Script 
+##   Written By: Jeremy Stevenson
+##   
+##
+################################################################
+mysqldump -uroot -p"$1" --all-databases > backup.sql
+tar -cvzf "$(date +%d-%m-%Y)".tar.gz backup.sql 
